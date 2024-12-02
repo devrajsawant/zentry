@@ -1,0 +1,113 @@
+import React, { useState } from 'react';
+
+const WhoWeAre = () => {
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  const handleHover = (videoSrc) => {
+    setActiveVideo(videoSrc);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveVideo(null);
+  };
+
+  return (
+    <div className="w-screen bg-[#DFDFF2] text-black">
+      <div className="relative pb-8 pt-36 flex flex-col items-center gap-5">
+        <h2 className="font-general text-sm uppercase md:text-[10px]">
+          Welcome to Zentry
+        </h2>
+        <h3 className="mt-5 text-center !text-black text-4xl md:text-[6rem] leading-[1]">
+          We're B
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video1.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video1.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video1.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 1</p>
+          </span>
+          U
+          ilding
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video2.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video2.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video2.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 2</p>
+          </span>
+          a new realit
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video3.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video3.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video3.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 3</p>
+          </span>
+          y that rew
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video4.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video4.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video4.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 4</p>
+          </span>
+          a
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video5.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video5.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video5.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 5</p>
+          </span>
+          rds playe
+          <span
+            className="inline-block relative w-32 h-32 overflow-hidden cursor-pointer"
+            onMouseEnter={() => handleHover('video6.mp4')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+            {activeVideo === 'video6.mp4' && (
+              <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+                <source src="video6.mp4" type="video/mp4" />
+              </video>
+            )}
+            <p className="absolute z-10 text-white text-sm font-bold">Box 6</p>
+          </span>
+          rs and e
+        </h3>
+      </div>
+    </div>
+  );
+};
+
+export default WhoWeAre;
